@@ -1,0 +1,35 @@
+{
+  "name": "bitcoin.co.id-cli",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "btcid": "index.js"
+  },
+  "author": "I Putu Yoga Permana",
+  "license": "ISC",
+  "dependencies": {
+    "async-request": "^1.2.0",
+    "chalk": "^2.3.0",
+    "commander": "^2.12.2",
+    "jsonfile": "^4.0.0",
+    "moment": "^2.20.1",
+    "nodemon": "^1.14.7",
+    "number-format.js": "^1.1.11",
+    "prompt": "^1.0.0",
+    "qhttp": "^0.6.0",
+    "request": "^2.83.0",
+    "table": "^4.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-plugin-node": "^5.2.1"
+  }
+}

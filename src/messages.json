@@ -1,0 +1,5 @@
+{
+  "emptyKeyWarning": "hey, please input some valid key, obtain it here https://vip.bitcoin.co.id/trade_api.",
+  "errorSavingFile": "error saving file: ",
+  "getYourKey": "Get your own key on https://vip.bitcoin.co.id/trade_api."
+}
