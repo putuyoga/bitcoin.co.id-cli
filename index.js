@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 const program = require('commander');
 
-const { tradeHistory, setKey } = require('./src/actions');
+const { tradeHistory, balance, setKey } = require('./src/actions');
 
 const action = (command) => {
   switch (command) {
     case 'tradeHistory': tradeHistory(); break;
+    case 'balance': balance(); break;
     case 'setKey': setKey(); break;
     default: console.log('what?'); break;
   }

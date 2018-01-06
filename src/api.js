@@ -26,8 +26,8 @@ const createOptions = (query) => ({
   data: query
 });
 
-const getTradeHistory = async () => {
-  const query = createQuery('tradeHistory');
+const get = async(method, path) => {
+  const query = createQuery(method);
   const options = createOptions(query); 
 
   const result = await request(apiUrl, options);
@@ -35,10 +35,19 @@ const getTradeHistory = async () => {
   const jsonResponse = JSON.parse(body);
 
   if(statusCode === 200 && jsonResponse.success !== 0)
-    return jsonResponse.return.trades;
+    return jsonResponse.return[path];
   throw jsonResponse.error;
-};
+}
+
+const getTradeHistory = async () => (
+  await get('tradeHistory', 'trades')
+);
+
+const getBalance = async () => (
+  await get('getInfo', 'balance')
+);
 
 module.exports = {
-  getTradeHistory
+  getTradeHistory,
+  getBalance
 };
