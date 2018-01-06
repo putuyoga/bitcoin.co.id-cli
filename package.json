@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "debug": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/**/**.spec.js"
   },
   "bin": {
     "btcid": "index.js"
@@ -29,7 +29,9 @@
     "table": "^4.0.2"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "eslint": "^4.14.0",
-    "eslint-plugin-node": "^5.2.1"
+    "eslint-plugin-node": "^5.2.1",
+    "mocha": "^4.1.0"
   }
 }
